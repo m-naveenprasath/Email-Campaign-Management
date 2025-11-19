@@ -1,0 +1,73 @@
+version: "3.9"
+
+services:
+  services:    # Django backend
+    build: ./services
+    container_name: django-services
+    command: ["/entrypoint.web.sh"]
+    env_file:
+      - ./services/.env
+    volumes:
+      - ./services:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+
+  celery_worker:
+    build: ./services
+    container_name: celery-worker
+    command: ["/entrypoint.worker.sh"]
+    env_file:
+      - ./services/.env
+    volumes:
+      - ./services:/app
+    depends_on:
+      - services
+      - postgres
+      - redis
+    restart: always
+
+  celery_beat:
+    build: ./services
+    container_name: celery-beat
+    command: ["/entrypoint.beat.sh"]
+    env_file:
+      - ./services/.env
+    volumes:
+      - ./services:/app
+    depends_on:
+      - services
+      - postgres
+      - redis
+    restart: always
+
+  ui:    # React + Vite frontend
+    build: ./ui
+    container_name: react-ui
+    ports:
+      - "5173:80"
+    depends_on:
+      - services
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: clogenai
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
