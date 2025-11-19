@@ -44,9 +44,9 @@ Before running the project, make sure you have the following installed:
 | Frontend (Client)      | React + Vite                     |
 | Backend (Server)       | Django REST Framework            |
 | Task Queue             | Celery + Redis                   |
-| Email Sending          | Gmail SMTP                        |
-| Containerization       | Docker + Docker Compose           |
-| Database               | PostgreSQL (or SQLite for demo)  |
+| Email Sending          | Gmail SMTP                       |
+| Containerization       | Docker + Docker Compose          |
+| Database               | PostgreSQL                       |
 
 ---
 
