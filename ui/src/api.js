@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://130.211.206.150/api/', // adjust if your backend URL differs
+  baseURL: 'https://130.211.206.150/api/', // adjust if your backend URL differs
 });
 
 // Campaign APIs
