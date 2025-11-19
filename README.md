@@ -195,6 +195,12 @@ docker-compose up -d
 
 ---
 
+### 📘 API Documentation
+
+Manual documentation of all available API endpoints, including request/response formats and examples.
+
+- [📄 API Documentation (Word)](./docs/API_Documentation.docx)
+
 ## Usage
 
 - Add recipients (individually or via CSV upload)  
