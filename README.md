@@ -3,6 +3,11 @@
 A minimal but production-grade web application for creating, scheduling, and tracking bulk email campaigns.
 
 ---
+### 🔗 Live Preview / Demo
+
+🌐 **Live Demo**: [Mail](https://naveenemail-campaign.netlify.app/)
+
+---
 ## Prerequisites
 
 Before running the project, make sure you have the following installed:
