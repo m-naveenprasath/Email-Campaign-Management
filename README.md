@@ -127,6 +127,7 @@ POSTGRES_PORT=5432
 EMAIL_HOST_USER=your_email@gmail.com
 EMAIL_HOST_PASSWORD=your_app_password
 EMAIL_HOST=smtp.gmail.com
+ADMIN_EMAIL=your_admin_email@gmail.com   # add admin email to get report
 
 # Celery & Redis
 CELERY_BROKER_URL=redis://redis:6379/0

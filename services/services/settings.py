@@ -153,7 +153,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER','naveenprasathofficial@gmail.com')
-ADMIN_EMAIL = os.environ.get('naveen436219@gmail.com', 'naveen436219@gmail.com')
+ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL', 'naveen436219@gmail.com')
 
 CELERY_BROKER_URL = "redis://localhost:6379/0"
 CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
