@@ -207,6 +207,10 @@ Manual documentation of all available API endpoints, including request/response 
 
 - [📄 API Documentation (Word)](./docs/API_Documentation.docx)
 
+### Upload CSV Template:
+
+ - [📥 Download CSV Template](./docs/email.csv)
+
 ## Usage
 
 - Add recipients (individually or via CSV upload)  
